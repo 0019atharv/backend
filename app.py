@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 logging.basicConfig(level=logging.DEBUG)
 
-@app.route('/inventory', methods=['GET'])
+
 @app.route('/api/inventory', methods=['GET'])
 def get_inventory():
     search_query = request.args.get('search_query', default='', type=str)
